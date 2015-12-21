@@ -11,7 +11,7 @@ if [ -d /usr/share/nova-agent/1.39.1/ ] ; then
     EnvironmentFile=/etc/nova-agent.env
     ExecStart=/usr/sbin/nova-agent -n -l info /usr/share/nova-agent/nova-agent.py
     [Install]
-    WantedBy=multi-user.target' >> /root/test.txt
+    WantedBy=multi-user.target' >> /usr/lib/systemd/system/nova-agent.service
 
     echo 'LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/share/nova-agent/1.39.1/lib"
     PYTHONPATH="${PYTHONPATH}:/usr/share/nova-agent/1.39.1/lib/python2.6/site-packages:/usr/share/nova-agent/1.39.1/lib/python2.6/"' >> /etc/nova-agent.env
