@@ -2,7 +2,7 @@
 #This script will automatically fix 1.39 nova-agent issues related to updating the systemd-python package
 
 if [ -d /usr/share/nova-agent/1.39.1/ ] ; then
-    then echo "Nova-agent version 1.39.1 appears to be installed, making changes to fix Nova-agent startup"
+    echo "Nova-agent version 1.39.1 appears to be installed, making changes to fix Nova-agent startup"
     touch /usr/lib/systemd/system/nova-agent.service
     echo '[Unit]
     Description=nova-agent service
